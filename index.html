@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casi studio Elisa Ughetto</title>
+<meta name="description" content="Social Media Strategist e consulente marketing. Tre casi studio con numeri e screenshot prima e dopo.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Elisa Ughetto · Casi studio">
+<meta property="og:description" content="Strategia social per professionisti, aziende e startup. Tre progetti con i numeri da cui siamo partiti e quelli di oggi.">
+<meta property="og:url" content="https://elisaughetto.github.io/casi-studio/">
+<meta property="og:image" content="https://elisaughetto.github.io/casi-studio/img/me-profilo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap">
+<style>
+/* Una colonna stretta da leggere sul telefono: intestazione, tre casi con prima/dopo, come lavoro, contatti.
+   Tema chiaro scelto di proposito (documenti su sfondo bianco), un solo colore di accento. */
+:root {
+  --bg: #ffffff;
+  --ink: #15181e;
+  --muted: #5a6170;
+  --line: #e3e6eb;
+  --soft: #f6f4ef;
+  --accent: #1f72c9;
+  --accent-ink: #ffffff;
+  --display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --body: "Outfit", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+a { color: var(--accent); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0; }
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Intestazione */
+.hero { display: flex; flex-direction: column; gap: 14px; }
+.collage { display: flex; align-items: flex-end; padding-left: 6px; margin-bottom: 10px; height: 144px; }
+.collage img { width: 92px; height: 118px; max-width: none; object-fit: cover; border-radius: 10px; border: 3px solid var(--bg); box-shadow: 0 6px 18px rgba(21, 24, 30, .16); }
+.collage img + img { margin-left: -16px; }
+.collage .c1 { transform: rotate(-6deg); }
+.collage .c2 { width: 112px; height: 140px; object-position: 50% 50%; position: relative; z-index: 2; }
+.collage .c3 { transform: rotate(6deg); object-position: 50% 20%; }
+.hero h1 { font-size: clamp(40px, 9vw, 56px); line-height: 1.05; }
+.role { font-size: 15px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.intro { font-size: 19px; max-width: 34em; }
+.intro-sub { color: var(--muted); max-width: 34em; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 20px; border-radius: 999px;
+  font-family: var(--body); font-size: 16px; font-weight: 500;
+  text-decoration: none; border: 1.5px solid var(--ink); color: var(--ink); background: var(--bg);
+}
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+/* Indice dei casi */
+.index { display: flex; flex-direction: column; border-top: 1px solid var(--ink); }
+.index a { display: flex; align-items: center; gap: 16px; padding-block: 14px; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); min-width: 0; }
+.index .n { font-family: var(--display); font-size: 30px; font-weight: 600; color: var(--accent); width: 22px; flex: none; line-height: 1; text-align: center; }
+.index .txt { display: flex; flex-direction: column; min-width: 0; }
+.index .who { font-weight: 600; font-size: 17px; line-height: 1.3; }
+.index .what { font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Caso studio: una scheda con struttura fissa */
+.cases { display: flex; flex-direction: column; gap: 28px; }
+.case { display: flex; flex-direction: column; gap: 18px; scroll-margin-top: 20px; border: 1px solid var(--line); border-radius: 16px; padding: 22px 18px; font-size: 16px; }
+.case-head { display: flex; align-items: flex-start; gap: 14px; }
+.case-n { font-family: var(--display); font-style: italic; font-weight: 500; font-size: 40px; line-height: 0.9; color: var(--accent); flex: none; }
+.case-title { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.case h2 { font-size: clamp(26px, 6.4vw, 34px); line-height: 1.1; }
+.meta { font-size: 14px; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.stat { background: var(--soft); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.stat .big { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 7vw, 34px); line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat .cap { font-size: 13.5px; line-height: 1.35; color: var(--muted); }
+.block { display: flex; flex-direction: column; gap: 8px; }
+.block h3.label { font-family: var(--body); }
+.results { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.results li { padding-left: 20px; position: relative; }
+.results li::before { content: ""; position: absolute; left: 0; top: 0.68em; width: 9px; height: 2px; background: var(--accent); }
+.award { display: flex; gap: 12px; align-items: flex-start; border: 1.5px solid var(--accent); border-radius: 10px; padding: 12px 14px; }
+.award svg { width: 24px; height: 24px; flex: none; color: var(--accent); margin-top: 1px; }
+.award p { font-size: 15px; }
+.award strong { font-weight: 600; }
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
+.shots figure { margin: 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.shots img { width: 100%; height: auto; max-width: 100%; display: block; border: 1px solid var(--line); border-radius: 8px; }
+.shots figcaption { font-size: 13px; color: var(--muted); }
+.shots figcaption b { color: var(--ink); font-weight: 600; }
+.profile-link { font-weight: 500; text-decoration: none; align-self: flex-start; border-bottom: 1.5px solid currentColor; padding-bottom: 1px; font-size: 15px; }
+
+.divider { height: 1px; background: var(--line); border: 0; margin: 0; }
+
+/* Come lavoro */
+.how { display: flex; flex-direction: column; gap: 18px; }
+.how h2 { font-size: clamp(28px, 6.5vw, 34px); }
+.how-sub { color: var(--muted); max-width: 34em; }
+.how-lead { font-weight: 500; margin-top: 2px; }
+.how { border: 1px solid var(--line); border-radius: 16px; padding: 24px 18px; }
+.ways { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.ways li { display: flex; gap: 14px; align-items: flex-start; padding-block: 16px; border-top: 1px solid var(--line); }
+.ways li:first-child { border-top: 0; padding-top: 4px; }
+.ways li:last-child { padding-bottom: 0; }
+.way-ic { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; }
+.way-ic svg { width: 24px; height: 24px; }
+.way-txt { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.ways h3 { font-size: 20px; }
+.ways p { color: var(--muted); font-size: 16px; }
+
+.fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+.fit-col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.fit h3 { font-size: 21px; }
+.fit-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.fit-list li { position: relative; padding-left: 28px; }
+.fit-list.yes li::before { content: ""; position: absolute; left: 2px; top: 0.35em; width: 12px; height: 7px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
+.fit-list.no li { color: var(--muted); }
+.fit-list.no li::before, .fit-list.no li::after { content: ""; position: absolute; left: 1px; top: 0.72em; width: 14px; height: 2px; background: var(--muted); border-radius: 1px; transform: rotate(45deg); }
+.fit-list.no li::after { transform: rotate(-45deg); }
+
+.shots img { cursor: zoom-in; }
+.lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(15, 17, 21, .88); display: flex; align-items: center; justify-content: center; padding: 20px; padding-top: calc(20px + env(safe-area-inset-top, 0px)); padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); cursor: zoom-out; }
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 10px; }
+.lightbox-close { position: absolute; top: calc(12px + env(safe-area-inset-top, 0px)); right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #ffffff; color: #15181e; font-size: 26px; line-height: 1; cursor: pointer; }
+.wa-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; justify-content: center; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(255, 255, 255, .94); border-top: 1px solid var(--line); backdrop-filter: blur(8px); }
+.wa-bar[hidden] { display: none; }
+.wa-bar .btn { width: 100%; max-width: 420px; justify-content: center; }
+@media (min-width: 761px) { .wa-bar { display: none !important; } }
+.page { padding-bottom: 96px; }
+
+/* Contatti */
+.contact { background: var(--soft); border-radius: 14px; padding: 28px 22px; display: flex; flex-direction: column; gap: 14px; }
+.contact h2 { font-size: clamp(26px, 6vw, 32px); }
+.contact .mail { font-size: 15px; color: var(--muted); }
+.contact .mail span { color: var(--ink); user-select: all; }
+.niche h2 { font-family: var(--body); }
+.niche { display: flex; flex-direction: column; gap: 16px; padding-top: 8px; border-top: 1px solid var(--line); }
+.niche-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; }
+.niche-item { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.niche-item h3 { font-size: 19px; }
+.niche-emoji { font-size: 0.9em; margin-right: 2px; }
+.niche-item p { font-size: 15px; color: var(--muted); }
+.footnote { font-size: 14px; color: var(--muted); text-align: left; }
+
+
+/* Intestazione e contatti centrati: sono i due momenti "biglietto da visita" */
+.hero { align-items: center; text-align: center; }
+.hero .intro, .hero .intro-sub { margin-inline: auto; }
+.hero .actions { justify-content: center; }
+.collage { justify-content: center; padding-left: 0; }
+.contact { align-items: center; text-align: center; }
+.contact .actions { justify-content: center; }
+@media (max-width: 600px) {
+  .hero .actions, .contact .actions { flex-direction: column; align-self: stretch; }
+  .hero .actions .btn, .contact .actions .btn { justify-content: center; }
+  .role .r { display: block; }
+  .role .sep { display: none; }
+}
+@media (max-width: 420px) {
+  body { font-size: 16px; }
+  .index a { padding-right: 8px; }
+  .index a + a { padding-left: 8px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn { transition: transform .15s ease, box-shadow .15s ease; }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(21, 24, 30, .12); }
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="hero">
+    <div class="collage" aria-hidden="true">
+      <img src="img/me-tramonto.jpg" alt="" class="c1" width="512" height="640">
+      <img src="img/me-profilo.jpg" alt="" class="c2" width="480" height="600">
+      <img src="img/me-ritratto.jpg" alt="" class="c3" width="480" height="640">
+    </div>
+    <span class="role"><span class="r">Social Media Strategist</span><span class="sep"> · </span><span class="r">Consulente marketing</span></span>
+    <h1>Elisa Ughetto</h1>
+    <p class="intro">Strategia social per professionisti, aziende e startup.</p>
+    <p class="intro-sub">Qui trovi tre progetti che ho seguito, con i numeri da cui siamo partiti e quelli di oggi. Gli screenshot sono dei profili reali.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://wa.me/393460080070" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
+        Scrivimi su WhatsApp
+      </a>
+      <a class="btn" href="https://www.instagram.com/elisa.ughetto/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+    </div>
+  </header>
+
+  <nav class="index" aria-label="I tre casi studio">
+    <a href="#cocina"><span class="n">1</span><span class="txt"><span class="who">Cocina con Claudio</span><span class="what">da 79 a 130.000 follower</span></span></a>
+    <a href="#metodo"><span class="n">2</span><span class="txt"><span class="who">Metodo Universitario</span><span class="what">230.000 follower da un account fermo</span></span></a>
+    <a href="#brezza"><span class="n">3</span><span class="txt"><span class="who">Brezza Sailing</span><span class="what">premiata «Humans of Marketers»</span></span></a>
+  </nav>
+
+  <div class="cases">
+  <article class="case" id="cocina">
+    <header class="case-head">
+      <span class="case-n">1</span>
+      <div class="case-title"><h2>Cocina con Claudio</h2><p class="meta">Scuola di cucina italiana a Valencia · dal 2023</p></div>
+    </header>
+    <div class="stats"><div class="stat"><span class="big">130.000</span><span class="cap">follower, partendo praticamente da zero</span></div><div class="stat"><span class="big">200+</span><span class="cap">clienti al mese, il 95% da Instagram</span></div></div>
+    <div class="shots"><figure><img src="img/cocina-prima.jpg" alt="Profilo Instagram di Cocina con Claudio a marzo 2023: 3 post e 79 follower" width="457" height="640" loading="lazy"><figcaption><b>Prima</b> · marzo 2023</figcaption></figure><figure><img src="img/cocina-dopo.jpg" alt="Profilo Instagram di Cocina con Claudio a ottobre 2026: 357 post e 131 mila follower, account verificato" width="457" height="640" loading="lazy"><figcaption><b>Dopo</b> · ottobre 2026</figcaption></figure></div>
+    <div class="block"><h3 class="label">Risultati</h3><ul class="results"><li>Da semplice hobby è diventato prima il lavoro principale di Claudio, poi un business strutturato.</li><li>Nel 2025 Claudio ha aperto il suo primo locale a Valencia, grazie al lavoro fatto insieme.</li></ul></div>
+    <div class="block"><h3 class="label">Cosa ho fatto</h3><p>L'ho affiancato da zero, perché Claudio non aveva nessuna esperienza di marketing. Gli ho insegnato tutto, dal girare i video al posizionamento, dal piano dei contenuti alle inserzioni per far crescere il profilo, fino al lancio dei nuovi servizi e alle scelte di business.</p></div>
+    <a class="profile-link" href="https://www.instagram.com/cocinaconclaudio/" target="_blank" rel="noopener">Guarda il profilo @cocinaconclaudio</a>
+  </article>
+
+  <article class="case" id="metodo">
+    <header class="case-head">
+      <span class="case-n">2</span>
+      <div class="case-title"><h2>Metodo Universitario</h2><p class="meta">Metodo di studio per studenti universitari · collaborazione attiva dal 2021</p></div>
+    </header>
+    <div class="stats"><div class="stat"><span class="big">230.000</span><span class="cap">follower, partendo da un account fermo da anni</span></div><div class="stat"><span class="big">Migliaia</span><span class="cap">di messaggi in direct generati in ottica di conversione</span></div></div>
+    <div class="shots"><figure><img src="img/metodo-prima.jpg" alt="Profilo Instagram di Metodo Universitario ad aprile 2024: 95.600 follower" width="457" height="640" loading="lazy"><figcaption><b>Prima</b> · aprile 2024</figcaption></figure><figure><img src="img/metodo-dopo.jpg" alt="Profilo Instagram di Metodo Universitario a ottobre 2026: 624 post e 230 mila follower" width="457" height="640" loading="lazy"><figcaption><b>Dopo</b> · ottobre 2026</figcaption></figure></div>
+    <div class="block"><h3 class="label">Risultati</h3><ul class="results"><li>Oltre 134.000 follower in più su un profilo che prima era fermo da 6 anni.</li><li>Instagram è diventato uno dei principali canali di acquisizione clienti del brand.</li></ul></div>
+    <div class="block"><h3 class="label">Cosa ho fatto</h3><p>La collaborazione è molto ampia. Oltre a seguire il profilo Instagram come social media manager, mi occupo di tanti altri aspetti da full stack marketer, soprattutto dei contenuti per l'acquisizione diretta di clienti.</p></div>
+    <a class="profile-link" href="https://www.instagram.com/metodo_universitario/" target="_blank" rel="noopener">Guarda il profilo @metodo_universitario</a>
+  </article>
+
+  <article class="case" id="brezza">
+    <header class="case-head">
+      <span class="case-n">3</span>
+      <div class="case-title"><h2>Brezza Sailing</h2><p class="meta">Vacanze in catamarano · novembre 2022 – settembre 2023</p></div>
+    </header>
+    <div class="award"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg><p>Dopo la nostra collaborazione Brezza Sailing è stata premiata da Marketers come <strong>«Humans of Marketers»</strong>.</p></div>
+    <div class="stats"><div class="stat"><span class="big">15.800</span><span class="cap">follower, da 5.098 in 10 mesi</span></div><div class="stat"><span class="big">100%</span><span class="cap">dei clienti della stagione arrivati da Instagram</span></div></div>
+    <div class="shots"><figure><img src="img/brezza-prima.jpg" alt="Profilo Instagram di Brezza Sailing a novembre 2022: 5.098 follower" width="457" height="640" loading="lazy"><figcaption><b>Prima</b> · novembre 2022</figcaption></figure><figure><img src="img/brezza-dopo.jpg" alt="Profilo Instagram di Brezza Sailing a settembre 2023: 15.800 follower" width="457" height="640" loading="lazy"><figcaption><b>Dopo</b> · settembre 2023</figcaption></figure></div>
+    <div class="block"><h3 class="label">Risultati</h3><ul class="results"><li>Abbiamo riempito la stagione di vacanze in catamarano, da maggio a ottobre, con il lavoro fatto su Instagram.</li><li>Ad agosto fino a tre catamarani prenotati per tutto il mese.</li></ul></div>
+    <div class="block"><h3 class="label">Cosa ho fatto</h3><p>Ho gestito tutto il profilo: piano editoriale, reel, caroselli con le testimonianze dei clienti e inserzioni. L'ho affiancata anche sul percorso di vendita, sui testi del sito e sulle email.</p></div>
+    <a class="profile-link" href="https://www.instagram.com/brezzasailing/" target="_blank" rel="noopener">Guarda il profilo @brezzasailing</a>
+  </article>
+  </div>
+
+  <section class="how" aria-labelledby="how-title">
+    <h2 id="how-title">Come possiamo lavorare insieme</h2>
+    <p class="how-sub">Partiamo da una call conoscitiva gratuita, in cui mi racconti il tuo progetto e capiamo insieme se e come ti posso aiutare.</p>
+    <p class="how-lead">Ecco le modalità in cui potremmo lavorare insieme:</p>
+    <ul class="ways">
+      <li>
+        <span class="way-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span>
+        <div class="way-txt"><h3>Consulenza strategica</h3><p>Studio il tuo profilo, ne parliamo in una call e ti lascio un report con la strategia da seguire.</p></div>
+      </li>
+      <li>
+        <span class="way-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><path d="M14.5 14.2c.5-.1 1-.2 1.5-.2 2.6 0 4.5 1.7 4.5 4.5"/></svg></span>
+        <div class="way-txt"><h3>Affiancamento di 3 mesi</h3><p>Per tre mesi ti affianco e ti insegno in ogni passaggio: posizionamento, strategia e contenuti del tuo profilo. L'obiettivo è la tua autonomia alla fine del percorso.</p></div>
+      </li>
+      <li>
+        <span class="way-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4c3-1 6 0 6 0s1 3 0 6l-6 6-6-6z"/><circle cx="15.5" cy="8.5" r="1.5"/><path d="M8 10H5l-2 3 4 1"/><path d="M14 16v3l-3 2-1-4"/><path d="M6 16c-1.5 1-2 3-2 4 1 0 3-.5 4-2"/></svg></span>
+        <div class="way-txt"><h3>Ci penso io</h3><p>Mi occupo io di tutto, sia della strategia sia dei contenuti, senza che tu debba pensare a niente.</p></div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="fit" aria-label="Quando posso aiutarti">
+    <div class="fit-col">
+      <h3>Posso aiutarti se…</h3>
+      <ul class="fit-list yes">
+        <li>hai un progetto in cui credi, ma online non si vede ancora quanto vale</li>
+        <li>pubblichi con costanza, ma i contenuti non si trasformano in clienti</li>
+        <li>vuoi capire perché si fanno le cose, non solo ricevere contenuti pronti</li>
+      </ul>
+    </div>
+    <div class="fit-col">
+      <h3>Non scrivermi se…</h3>
+      <ul class="fit-list no">
+        <li>cerchi scorciatoie e follower comprati</li>
+        <li>ti serve solo qualcuno che pubblichi, senza una strategia dietro</li>
+        <li>preferisci comunicare con promesse gonfiate</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Parliamo del tuo progetto</h2>
+    <p>Scrivimi su WhatsApp: ti rispondo io di persona e fissiamo una call conoscitiva gratuita per capire insieme se posso aiutarti.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://wa.me/393460080070" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
+        Scrivimi su WhatsApp
+      </a>
+      <a class="btn" href="https://www.instagram.com/elisa.ughetto/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+    </div>
+    <p class="mail">Oppure via email: <span>elisa.ughetto@gmail.com</span></p>
+  </section>
+
+  <section class="niche" aria-labelledby="niche-title">
+    <h2 id="niche-title" class="label">Tre mondi che conosco da vicino</h2>
+    <div class="niche-grid">
+      <div class="niche-item">
+        <h3><span class="niche-emoji" aria-hidden="true">🎷</span> Hai un progetto musicale o artistico?</h3>
+        <p>Sono una sassofonista diplomata al Conservatorio e ho insegnato musica per cinque anni. Oggi seguo anche i social di Vandoren Italia. Scrivimi, mi piacerebbe conoscere il tuo progetto.</p>
+      </div>
+      <div class="niche-item">
+        <h3><span class="niche-emoji" aria-hidden="true">⛵</span> Hai un progetto legato al mare?</h3>
+        <p>Ho la patente nautica e so di cosa stiamo parlando. Con Brezza Sailing abbiamo riempito un'intera stagione di vacanze in barca grazie all'acquisizione su Instagram. Scrivimi e ne parliamo.</p>
+      </div>
+      <div class="niche-item">
+        <h3><span class="niche-emoji" aria-hidden="true">🎥</span> Vendi corsi o formazione online?</h3>
+        <p>Da cinque anni lavoro dentro un infobusiness, Metodo Universitario: contenuti per le inserzioni, webinar di vendita, landing page e lanci. Scrivimi e ne parliamo.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Screenshot ingrandito">
+  <img id="lightbox-img" src="" alt="">
+  <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Chiudi">×</button>
+</div>
+
+<div class="wa-bar" id="wa-bar" hidden>
+  <a class="btn primary" href="https://wa.me/393460080070" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>Scrivimi su WhatsApp</a>
+</div>
+
+<script>
+(function () {
+  var box = document.getElementById('lightbox');
+  var big = document.getElementById('lightbox-img');
+  function close() { box.hidden = true; big.src = ''; }
+  document.querySelectorAll('.shots img').forEach(function (img) {
+    img.addEventListener('click', function () { big.src = img.src; big.alt = img.alt; box.hidden = false; });
+  });
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) close(); });
+
+  var bar = document.getElementById('wa-bar');
+  var heroBtns = document.querySelector('.hero .actions');
+  var contact = document.querySelector('.contact');
+  if (!('IntersectionObserver' in window) || !heroBtns || !contact) return;
+  var heroVisible = true, contactVisible = false;
+  function update() { bar.hidden = heroVisible || contactVisible; }
+  new IntersectionObserver(function (es) { heroVisible = es[0].isIntersecting; update(); }).observe(heroBtns);
+  new IntersectionObserver(function (es) { contactVisible = es[0].isIntersecting; update(); }).observe(contact);
+})();
+</script>
+</body>
+</html>
